@@ -36,10 +36,14 @@ public class Stack<T, E> {
         return (T) topItem.getValue();
     }
     public boolean isEmpty(){
-
+        if (size == 0){
+            return true;
+        } else{
+            return false;
+        }
     }
 
     public int size(){
-
+        return size;
     }
 }
