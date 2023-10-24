@@ -3,7 +3,7 @@ public class Stack<T, E> {
     // Instance Data
 
     private int size;
-    private Node topItem;
+    private StackNode topItem;
 
     // Constructors
 
@@ -15,6 +15,15 @@ public class Stack<T, E> {
 
     public void push(E element){
 
+        StackNode newItem = new StackNode(element);
+
+        if (size == 0){
+            topItem = newItem;
+        } else{
+            StackNode subItem = topItem;
+            topItem = newItem;
+            topItem.setChildNode(subItem);
+        } size++;
     }
 
     public T pop(){

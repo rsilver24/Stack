@@ -1,31 +1,31 @@
 // Roan Silver      Created: September 21st 2023        Last Edits: September 26th, 2023
 // Collaborators: Luke O'Drobinak & Ethan Ayers       Peer Comments: September 4th, 2023
-public class Node<T> {
+public class StackNode<T> {
 
     // Instance Data !!!
 
-    private Node parentNode;
-    private Node childNode;
+    private StackNode parentNode;
+    private StackNode childNode;
     private T value;
 
     // CONSTRUCTORS :D
 
     // Default "Empty" Constructor
-    public Node(){
+    public StackNode(){
         parentNode = null;
         childNode = null;
         value = null;
     }
 
     // 1 Input Constructor
-    public Node(T valueInput){
+    public StackNode(T valueInput){
         this.value = valueInput;
         parentNode = null;
         childNode = null;
     }
 
     // 3 Input Constructor
-    public Node(T valueInput, Node parentNodeInput, Node childNodeInput){
+    public StackNode(T valueInput, StackNode parentNodeInput, StackNode childNodeInput){
         this.value = valueInput;
         this.parentNode = parentNodeInput;
         this.childNode = childNodeInput;
@@ -33,11 +33,11 @@ public class Node<T> {
 
     // ACCESSORS :)
 
-    public Node getParentNode(){
+    public StackNode getParentNode(){
         return parentNode;
     }
 
-    public Node getChildNode(){
+    public StackNode getChildNode(){
         return childNode;
     }
 
@@ -47,11 +47,11 @@ public class Node<T> {
 
     // MUTATORS :/
 
-    public void setParentNode(Node newParentNode){
+    public void setParentNode(StackNode newParentNode){
         parentNode = newParentNode;
     }
 
-    public void setChildNode(Node newChildNode){
+    public void setChildNode(StackNode newChildNode){
         childNode = newChildNode;
     }
 
@@ -65,7 +65,7 @@ public class Node<T> {
         return "Node: " + value;
     }
 
-    public boolean equals(Node passingNode){
+    public boolean equals(StackNode passingNode){
         if (this.getValue().equals(passingNode.getValue())){
             return true;
         } return false;
