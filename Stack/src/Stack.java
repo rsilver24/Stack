@@ -1,3 +1,5 @@
+// Roan Silver      Created: October 24th 2023        Last Edits: October 24th, 2023
+// Collaborators:
 public class Stack<T, E> {
 
     // Instance Data
@@ -13,6 +15,8 @@ public class Stack<T, E> {
 
     // Methods
 
+    // Method PUSH
+
     public void push(E element){
 
         StackNode newItem = new StackNode(element);
@@ -26,15 +30,22 @@ public class Stack<T, E> {
         } size++;
     }
 
+    // Method POP
+
     public T pop(){
         T value = (T) topItem.getValue();
         topItem = topItem.getChildNode();
         return value;
     }
 
+    // Method PEEK
+
     public T peek(){
         return (T) topItem.getValue();
     }
+
+    // Method isEmpty
+
     public boolean isEmpty(){
         if (size == 0){
             return true;
@@ -42,6 +53,8 @@ public class Stack<T, E> {
             return false;
         }
     }
+
+    // Method SIZE
 
     public int size(){
         return size;

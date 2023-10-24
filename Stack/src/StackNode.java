@@ -1,10 +1,9 @@
-// Roan Silver      Created: September 21st 2023        Last Edits: September 26th, 2023
-// Collaborators: Luke O'Drobinak & Ethan Ayers       Peer Comments: September 4th, 2023
-public class StackNode<T> {
+// Roan Silver      Created: September 21st 2023        Last Edits: October 24th, 2023
+// Collaborators:
+public class StackNode<T, E> {
 
     // Instance Data !!!
 
-    private StackNode parentNode;
     private StackNode childNode;
     private T value;
 
@@ -12,7 +11,6 @@ public class StackNode<T> {
 
     // Default "Empty" Constructor
     public StackNode(){
-        parentNode = null;
         childNode = null;
         value = null;
     }
@@ -20,22 +18,16 @@ public class StackNode<T> {
     // 1 Input Constructor
     public StackNode(T valueInput){
         this.value = valueInput;
-        parentNode = null;
         childNode = null;
     }
 
-    // 3 Input Constructor
-    public StackNode(T valueInput, StackNode parentNodeInput, StackNode childNodeInput){
+    // 2 Input Constructor
+    public StackNode(T valueInput, StackNode childNodeInput){
         this.value = valueInput;
-        this.parentNode = parentNodeInput;
         this.childNode = childNodeInput;
     }
 
     // ACCESSORS :)
-
-    public StackNode getParentNode(){
-        return parentNode;
-    }
 
     public StackNode getChildNode(){
         return childNode;
@@ -46,10 +38,6 @@ public class StackNode<T> {
     }
 
     // MUTATORS :/
-
-    public void setParentNode(StackNode newParentNode){
-        parentNode = newParentNode;
-    }
 
     public void setChildNode(StackNode newChildNode){
         childNode = newChildNode;
