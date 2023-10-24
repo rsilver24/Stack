@@ -27,7 +27,9 @@ public class Stack<T, E> {
     }
 
     public T pop(){
-
+        T value = (T) topItem.getValue();
+        topItem = topItem.getChildNode();
+        return value;
     }
 
     public T peek(){
