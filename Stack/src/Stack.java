@@ -1,4 +1,4 @@
-public class Stack {
+public class Stack<T, E> {
 
     // Instance Data
 
