@@ -33,7 +33,7 @@ public class Stack<T, E> {
     }
 
     public T peek(){
-
+        return (T) topItem.getValue();
     }
     public boolean isEmpty(){
 
