@@ -35,6 +35,7 @@ public class Stack<T, E> {
     public T pop(){
         T value = (T) topItem.getValue();
         topItem = topItem.getChildNode();
+        size--;
         return value;
     }
 
